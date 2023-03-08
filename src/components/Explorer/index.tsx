@@ -3,7 +3,7 @@ import { Folder } from "./Folder";
 import { SubMenu } from "./SubMenu";
 import { File } from "./File";
 import { useContext } from "react";
-import { FileJs } from "phosphor-react";
+import { FileHtml, FileJs } from "phosphor-react";
 import { ActiveFileContext } from "../../contexts/ActiveFileContext";
 
 export default function() {
@@ -28,8 +28,8 @@ export default function() {
               about.json
             </File>
             <File active={() => isActive('socials')} onClick={() => setActiveFile("socials")}>
-              <FileJson size={16} />
-              socials.json
+              <FileHtml size={16} />
+              socials.html
             </File>
           </Folder>
 
