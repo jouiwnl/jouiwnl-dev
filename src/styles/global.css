@@ -9,3 +9,22 @@
       font-family: Inter;
   }
 }
+
+:root {
+  --primary: rgb(32, 32, 32);
+  --secondary: rgb(45, 48, 54);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border: 3px solid var(--primary);
+}

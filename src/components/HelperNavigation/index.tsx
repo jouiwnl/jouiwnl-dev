@@ -1,11 +1,29 @@
 import { Bug, Cog, Files, FlaskConical, GitFork, Monitor, Puzzle, Search } from 'lucide-react'
+import { useState } from 'react';
 import { ButtonNavigation } from "./ButtonNavigation";
 
-export default function() {
+interface HelperNavigationProps {
+  activeNav: string;
+  setActiveNav: (value: string) => void;
+}
+
+export default function(props: HelperNavigationProps) {
+  function isActive(value: string) {
+    return value === props.activeNav;
+  }
+
+  function handleActive(value: string) {
+    if (value === props.activeNav) {
+      return props.setActiveNav('');
+    }
+
+    return props.setActiveNav(value);
+  }
+
   return (
-    <div className="min-h-screen w-14 flex flex-col justify-between">
+    <>
       <div className="flex flex-col">
-        <ButtonNavigation icon={Files} isActive />
+        <ButtonNavigation icon={Files} onClick={() => handleActive('files')} active={() => isActive('files')} />
         <ButtonNavigation icon={Search} />
         <ButtonNavigation icon={GitFork} />
         <ButtonNavigation icon={Bug} />
@@ -16,6 +34,6 @@ export default function() {
       <div className="flex flex-col items-center">
         <ButtonNavigation icon={Cog} />
       </div>
-    </div>
+    </>
   )
 }

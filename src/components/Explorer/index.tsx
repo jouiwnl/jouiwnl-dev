@@ -23,29 +23,29 @@ export default function() {
       <nav className="mt-4 flex flex-col">
         <SubMenu defaultOpen title="JOUIWNL-DEV">
           <Folder defaultOpen title="About me">
-            <File active={() => isActive('about')} onClick={() => setActiveFile("about")}>
+            <File active={() => isActive('about.md')} onClick={() => setActiveFile("about.md")}>
               <FileJson size={16} />
-              about.json
+              about.md
             </File>
-            <File active={() => isActive('socials')} onClick={() => setActiveFile("socials")}>
+            <File active={() => isActive('socials.html')} onClick={() => setActiveFile("socials.html")}>
               <FileHtml size={16} />
               socials.html
             </File>
           </Folder>
 
           <Folder title="Setup">
-            <File active={() => isActive('work')} onClick={() => setActiveFile("work")}>
+            <File active={() => isActive('work.json')} onClick={() => setActiveFile("work.json")}>
               <FileJson size={16} />
               work.json
             </File>
-            <File active={() => isActive('gaming')} onClick={() => setActiveFile("gaming")}>
+            <File active={() => isActive('gaming.json')} onClick={() => setActiveFile("gaming.json")}>
               <FileJson size={16} />
               gaming.json
             </File>
           </Folder>
 
           <Folder title="Playground">
-            <File active={() => isActive('playground')} onClick={() => setActiveFile("playground")}>
+            <File active={() => isActive('playground.json')} onClick={() => setActiveFile("playground.js")}>
               <FileJs size={16} />
               playground.js
             </File>

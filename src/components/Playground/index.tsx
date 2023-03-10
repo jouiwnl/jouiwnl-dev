@@ -1,8 +1,8 @@
 import { Lightning, Spinner } from 'phosphor-react'
 import ANSIToHTML from 'ansi-to-html'
-import CodeEditor from '@uiw/react-textarea-code-editor'
 import { getWebContainerInstance } from '../../lib/web-container'
 import { useState } from 'react'
+import CodeEditor from '../CodeEditor';
 
 const initialCode = [
   `import fetch from 'isomorphic-fetch';`,
@@ -20,8 +20,6 @@ export default function() {
   const [code, setCode] = useState(initialCode)
   const [output, setOutput] = useState<string[]>([])
   const [isRunning, setIsRunning] = useState(false)
-
-  const length = code.split('\n').length;
 
   async function handleEvaluateCode() {
     setIsRunning(true)
@@ -89,25 +87,7 @@ export default function() {
 
   return (
     <div className="not-prose flex flex-col min-h-screen min-w-[600px]">
-      <div className="flex flex-row">
-        <div className="flex flex-col font-monospace items-center leading-7 mt-5">
-          {Array(length).fill(0).map((_, index) => (
-            <span className="text-[#8F8CA8] text-[16px]">
-              {index + 1}
-            </span>
-          ))}
-        </div>
-        <CodeEditor
-          value={code}
-          language="js"
-          placeholder="Please enter JS code."
-          onChange={(event) => setCode(event.target.value)}
-          minHeight={80}
-          padding={20}
-          spellCheck={false}
-          className="bg-omni-dark font-monospace rounded text-white text-[16px] leading-7"
-        />
-      </div>
+      <CodeEditor code={{ code, type: 'js', editable: true }} setCode={setCode} />
       <div
         className="bg-black p-5 min-h-[350px] rounded m-4 text-sm relative bottom-0"
         contentEditable={false}

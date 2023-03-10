@@ -1,6 +1,6 @@
 export const codes = [
   {
-    id: 'about',
+    id: 'about.md',
     type: 'markdown',
     fontSize: '1.2rem',
     code: `# My name is João Henrique and I'm a full stack developer!
@@ -16,7 +16,7 @@ The position I work in daily is full stack developer.
     `
   },
   {
-    id: 'socials',
+    id: 'socials.html',
     type: 'html',
     fontSize: '1.1rem',
     code: `<html lang="en">
@@ -32,7 +32,7 @@ The position I work in daily is full stack developer.
     `
   },
   {
-    id: 'work',
+    id: 'work.json',
     type: 'json',
     fontSize: '1.1rem',
     code: `{
@@ -60,7 +60,7 @@ The position I work in daily is full stack developer.
     `
   },
   {
-    id: 'gaming',
+    id: 'gaming.json',
     type: 'json',
     fontSize: '1.1rem',
     code: `{
