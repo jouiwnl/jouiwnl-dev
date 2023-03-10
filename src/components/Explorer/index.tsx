@@ -14,13 +14,15 @@ export default function() {
   }
 
   return (
-    <div className="py-2 px-4 mt-1 text-white">
-      <strong className="font-medium w-full text-xs pl-2 flex items-center justify-between">
-        EXPLORER
+    <div className="py-2 mt-1 text-white">
+      <strong className="font-medium h-2 px-6 py-2 w-full text-xs pl-2 flex items-center justify-between">
+        <span className="ml-2">
+          EXPORER
+        </span>
         <MoreHorizontal size={16} strokeWidth={1.5} />
       </strong>
 
-      <nav className="mt-4 flex flex-col">
+      <nav className="mt-3 flex flex-col">
         <SubMenu defaultOpen title="JOUIWNL-DEV">
           <Folder defaultOpen title="About me">
             <File active={() => isActive('about.md')} onClick={() => setActiveFile("about.md")}>
@@ -34,18 +36,18 @@ export default function() {
           </Folder>
 
           <Folder title="Setup">
-            <File active={() => isActive('work.json')} onClick={() => setActiveFile("work.json")}>
+            <File active={() => isActive('work.js')} onClick={() => setActiveFile("work.js")}>
               <FileJson size={16} />
-              work.json
+              work.js
             </File>
-            <File active={() => isActive('gaming.json')} onClick={() => setActiveFile("gaming.json")}>
+            <File active={() => isActive('gaming.js')} onClick={() => setActiveFile("gaming.js")}>
               <FileJson size={16} />
-              gaming.json
+              gaming.js
             </File>
           </Folder>
 
           <Folder title="Playground">
-            <File active={() => isActive('playground.json')} onClick={() => setActiveFile("playground.js")}>
+            <File active={() => isActive('playground.js')} onClick={() => setActiveFile("playground.js")}>
               <FileJs size={16} />
               playground.js
             </File>

@@ -8,7 +8,7 @@ export interface AuthContextProps {
 export const ActiveFileContext = createContext<AuthContextProps>({});
 
 export function ActiveFileProvider({ children }: any) {
-  const [activeFile, setActiveFile] = useState('about');
+  const [activeFile, setActiveFile] = useState('about.md');
 
   return (
     <ActiveFileContext.Provider value={{

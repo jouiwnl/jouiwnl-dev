@@ -1,9 +1,9 @@
 export const codes = [
   {
     id: 'about.md',
-    type: 'markdown',
+    type: 'md',
     fontSize: '1.2rem',
-    code: `# My name is João Henrique and I'm a full stack developer!
+    code: `My name is João Henrique and I'm a full stack developer!
 
 Software developer with knowledge in Java, NodeJS (NestJS, TypeORM, Prisma), React, React Native.
 Self motivated and hungry to improve my skills.
@@ -32,38 +32,38 @@ The position I work in daily is full stack developer.
     `
   },
   {
-    id: 'work.json',
-    type: 'json',
+    id: 'work.js',
+    type: 'js',
     fontSize: '1.1rem',
-    code: `{
-  "processor": "Intel core-i7 12700K 3.6GHz",
-  "memory": "32gb",
-  "storage": "512gb SSD NVMe",
-  "monitors": [
+    code: `const work = {
+  processor: "Intel core-i7 12700K 3.6GHz",
+  memory: "32gb",
+  storage: "512gb SSD NVMe",
+  monitors: [
     {
-      "name": "LG UltraWide 29'",
-      "resolution": "QUAD HD"
+      name: "LG UltraWide 29'",
+      resolution: "QUAD HD"
     },
     {
-      "name": "Integrated laptop screen",
-      "resolution": "FULL HD"
+      name: "Integrated laptop screen",
+      resolution: "FULL HD"
     },
     {
-      "name": "DELL 19' Widescreen",
-      "resolution": "FULL HD"
+      name: "DELL 19' Widescreen",
+      resolution: "FULL HD"
     }
   ],
-  "keyboard": "Redragon Dark Avenger",
-  "mouse": "Logitech mx master 3s",
-  "headset": "Astro A10"
+  keyboard: "Redragon Dark Avenger",
+  mouse: "Logitech mx master 3s",
+  headset: "Astro A10"
 }
     `
   },
   {
-    id: 'gaming.json',
-    type: 'json',
+    id: 'gaming.js',
+    type: 'js',
     fontSize: '1.1rem',
-    code: `{
+    code: `const gaming = {
   "processor": "Ryzen 5 5600x 3.7GHz",
   "memory": "16gb",
   "storage": [

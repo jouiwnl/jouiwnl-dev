@@ -21,6 +21,8 @@ export default function(props: CodeEditorProps) {
 
   const length = code.split('\n').length;
 
+  console.log(props.code.type)
+
   useEffect(() => {
     setCode(props.code?.code);
   }, [props.code])
