@@ -50,19 +50,9 @@ export default function() {
       },
     })
 
-    const install = await webContainer.spawn('pnpm', ['i'], {
-      // output: false,
-    })
+    const install = await webContainer.spawn('pnpm', ['i'])
 
     setOutput(['🔥 Installing dependencies!'])
-
-    install.output.pipeTo(
-      new WritableStream({
-        write(data) {
-          setOutput((state) => [...state, ANSIConverter.toHtml(data)])
-        },
-      }),
-    )
 
     await install.exit
 
